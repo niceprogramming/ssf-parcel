@@ -1,0 +1,36 @@
+{
+  "name": "ssf-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "browser-dev": "dist/dev/ssf-parcel.js",
+  "browser-prod": "dist/prod/ssf-parcel.js",
+  "targets": {
+    "browser-dev": {
+      "engines": {
+        "browsers": [
+          "> 10%",
+          "not dead"
+        ]
+      },
+      "sourceMap": {
+        "inline": true
+      }
+    },
+    "browser-prod": {
+      "engines": {
+        "browsers": [
+          "> 1%",
+          "not dead"
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "build-dev": "parcel build --target browser-dev --no-minify index.js",
+    "build-prod": "parcel build --target browser-prod --no-source-maps index.js"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.3.2"
+  }
+}
