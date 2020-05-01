@@ -1,8 +1,7 @@
 elli.script.subscribe("loan", "open", onLoanOpen);
 
-async function onLoanOpen(args) {
-    
-    let loan = await elli.script.getObject("loan");    
+async function onLoanOpen(loan) {
+          
     let auth = await elli.script.getObject("auth");
 
     let user = await auth.getUser();
